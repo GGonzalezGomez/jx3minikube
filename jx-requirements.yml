@@ -14,18 +14,24 @@ spec:
     gitName: github
     gitServer: https://github.com
     provider: minikube
+    registry: 10.101.140.74
   environments:
   - key: dev
+    owner: GGonzalezGomez
+    repository: jx3minikube
   - key: staging
   - key: production
   ingress:
     domain: ""
     externalDNS: false
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: GGonzalezGomez
   repository: bucketrepo
   secretStorage: vault
   vault: {}
